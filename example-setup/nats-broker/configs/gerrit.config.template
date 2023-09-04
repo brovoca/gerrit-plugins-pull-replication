@@ -37,14 +37,7 @@
 [plugins]
     allowRemoteAdmin = true
 
-[plugin "events-kafka"]
-    sendAsync = true
-    bootstrapServers = $BROKER_HOST:$BROKER_PORT
-    groupId = $INSTANCE_ID
-    numberOfSubscribers = 6
-    securityProtocol = PLAINTEXT
-    pollingIntervalMs = 1000
-    enableAutoCommit = true
-    autoCommitIntervalMs = 1000
-    autoOffsetReset = latest
-    sendStreamEvents = true
+[plugin "events-nats"]
+    server = $BROKER_HOST
+    sendStreamEvents = $BROKER_SEND_STREAM_EVENTS
+    streamName = $BROKER_STREAM

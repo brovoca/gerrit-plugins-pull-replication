@@ -8,7 +8,7 @@ replicateOnStartup = $REPLICATE_ON_STARTUP
     maxRetries = 100
     useCGitClient = false
     consumeStreamEvents = false
-    eventBrokerTopic = gerrit
+    eventBrokerTopic = gerrit_stream_events
     syncRefs = "ALL REFS ASYNC"
     maxApiPayloadSize = 40000
 

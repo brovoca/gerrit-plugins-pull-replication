@@ -16,5 +16,8 @@ cp $GERRIT_HOME/bazel-bin/plugins/events-broker/events-broker.jar .
 Start up the application using docker compose:
 
 ```bash
+export NATS_URL=nats.localdomain:4222
+export NATS_USER="nats_client"
+export NATS_PASSWORD="1234pass"
 docker-compose -p nats up
 ```
