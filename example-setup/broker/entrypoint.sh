@@ -1,7 +1,6 @@
 #!/bin/bash -x
 
 function setup_replication_config {
-
   echo "Replacing variables for file /var/gerrit/etc/replication.config.template"
   cat /var/gerrit/etc/replication.config.template | envsubst | sed 's/#{name}#/${name}/g' > /var/gerrit/etc/replication.config
   cat /var/gerrit/etc/replication.config
